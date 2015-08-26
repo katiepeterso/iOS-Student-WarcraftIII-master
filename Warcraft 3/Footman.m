@@ -12,12 +12,17 @@
 
 @implementation Footman
 
-
-
 -(instancetype)init{
     self.healthPoints = 60;
     return self;
 }
 
+- (void)damage:(int)damage {
+    self.healthPoints = self.healthPoints - 4;
+}
+
+- (void)attack:(Unit *)enemy withDamage:(int)damage {
+    enemy.healthPoints = enemy.healthPoints - damage;
+}
 
 @end
