@@ -7,6 +7,7 @@
 //
 
 #import "Footman.h"
+#import "Barracks.h"
 
 @implementation Footman
 
@@ -14,5 +15,6 @@
     _healthPoints = 60;
     return self;
 }
+
 
 @end

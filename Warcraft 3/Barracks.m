@@ -7,6 +7,7 @@
 //
 
 #import "Barracks.h"
+#import "Footman.h"
 
 @implementation Barracks
 
@@ -16,5 +17,11 @@
     return self;
 }
 
+- (Footman *)trainFootman {
+    Footman *footmanTrained = [Footman new];
+    _gold = _gold - 135;
+    _food = _food - 2;
+    return footmanTrained;
+}
 
 @end
