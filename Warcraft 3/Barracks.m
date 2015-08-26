@@ -18,10 +18,24 @@
 }
 
 - (Footman *)trainFootman {
-    Footman *footmanTrained = [Footman new];
-    _gold = _gold - 135;
-    _food = _food - 2;
-    return footmanTrained;
+    if ([self canTrainFootman]) {
+        Footman *footmanTrained = [Footman new];
+        _gold = _gold - 135;
+        _food = _food - 2;
+        return footmanTrained;
+    }
+    return nil;
+}
+
+- (BOOL)canTrainFootman {
+    if (_food < 2) {
+        return NO;
+    }
+    else if (_gold < 135) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
