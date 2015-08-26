@@ -8,11 +8,14 @@
 
 #import "Footman.h"
 #import "Barracks.h"
+#import "Unit.h"
 
 @implementation Footman
 
+
+
 -(instancetype)init{
-    _healthPoints = 60;
+    self.healthPoints = 60;
     return self;
 }
 
