@@ -11,5 +11,6 @@
 @interface Unit : NSObject
 
 @property (nonatomic) int healthPoints;
+@property (nonatomic) int attackPower;
 
 @end
