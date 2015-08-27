@@ -8,6 +8,7 @@
 
 #import "Barracks.h"
 #import "Footman.h"
+#import "Peasant.h"
 
 @implementation Barracks
 
@@ -37,5 +38,27 @@
     
     return YES;
 }
+
+- (Peasant *)trainPeasant {
+    if ([self canTrainPeasant]) {
+        Peasant *peasantTrained = [Peasant new];
+        _gold = _gold - 90;
+        _food = _food - 5;
+        return peasantTrained;
+    }
+    return nil;
+}
+
+- (BOOL)canTrainPeasant {
+    if (_food < 5) {
+        return NO;
+    }
+    else if (_gold < 90) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 @end
